@@ -22,10 +22,22 @@ const books = [
 const BookList = () => {
   return (
     <section className='booklist'>
+      <EventExamples />
       {books.map((book) => {
         return <Book {...book} key={book.id} />;
       })}
     </section>
+  );
+};
+
+const EventExamples = () => {
+  return (
+    <article>
+      <form>
+        <h2>Typeical Form</h2>
+        <input type="text" style={{margin: "1rem"}}/>
+      </form>
+    </article>
   );
 };
 
